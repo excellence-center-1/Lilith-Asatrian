@@ -16,13 +16,13 @@ void shellSort(int* arr, int size){
 	}
 }
 
-int ternarySearch(int * arr, int low, int right, int x){
+int ternarySearch(int * arr, int left, int right, int x){
 	
 	
 	if(low<=right){
 
-	int mid1=low+(right-low)/3;
-	int mid2=right+(right-low)/3;
+	int mid1=left+(right-left)/3;
+	int mid2=right+(right-left)/3;
 
 	if(arr[mid1]==x){
 		return mid1;
@@ -33,7 +33,7 @@ int ternarySearch(int * arr, int low, int right, int x){
 	}
 
 	if(x<arr[mid1]){
-		return ternarySearch(arr, low, mid1-1, x);
+		return ternarySearch(arr, left, mid1-1, x);
 	}
 	else if(x>arr[mid2]){
 		return ternarySearch(arr, mid2+1, right, x);
