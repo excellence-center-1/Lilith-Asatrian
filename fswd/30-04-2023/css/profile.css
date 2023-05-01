@@ -1,0 +1,37 @@
+header {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #1877f2;
+  margin-top: 35px;
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+  text-align: center
+}
+.profile {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  cursor: pointer;
+}
+.profile-name {
+  display: flex;
+  margin-right: 50%;
+  line-height: 100%;
+  font-weight: bolder;
+  font-size: 200%; 
+}
+.container p {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: bolder;
+}
+.line {
+  border: 0.5px inset #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+nav{
+  margin-top: 1px;
+}
+
