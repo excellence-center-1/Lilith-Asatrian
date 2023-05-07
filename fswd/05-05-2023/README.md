@@ -1,6 +1,6 @@
 # N4 homework
 
-**The assigned homework:**
+**The assigned homework:** <br>
 Write a script that prompts the user for their name and their age.
 Then, based on their age, generate a personalized message that greets them 
 and tells them which stage of life they are in (e.g. "Welcome, John! You are a young adult."). 
