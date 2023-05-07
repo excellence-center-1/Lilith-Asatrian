@@ -1,4 +1,4 @@
-#N4 homework
+# N4 homework
 
 **The assigned homework:**
 Write a script that prompts the user for their name and their age.
