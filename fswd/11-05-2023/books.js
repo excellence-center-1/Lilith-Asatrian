@@ -49,7 +49,7 @@ console.log(author_arr)
 //Task 7:
 const new_arr=[]
 books.forEach((book) => {
-  let author = new_arr.find(author => author.name === book.name)
+  let author = new_arr.find(author => author.name === book.author)
 
   if(!author){
     author = {name: book.author, books: []}
