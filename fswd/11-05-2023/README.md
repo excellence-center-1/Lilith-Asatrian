@@ -1,5 +1,5 @@
 ## N5 homework
-**The assigned homework**<br>
+**The assigned homework:**<br>
 Task 1: Create an array of objects representing books<br>
 Task 2: Use a loop to iterate through the array and print out the title of each book <br>
 Task 3: Use a loop to calculate the total number of pages in the array of books <br>
