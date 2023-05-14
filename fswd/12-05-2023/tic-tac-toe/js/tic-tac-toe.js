@@ -7,7 +7,6 @@ let displayMatrix = function(matrix) {
  };
  
  let win = function(matrix, player) {
-
  	//check rows
  	for(let i = 0; i < matrix.length; ++i) {
   	let rowWin = true;
