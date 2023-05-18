@@ -6,7 +6,7 @@ let displayMatrix = function (matrix) {
     matrix[2].join("  ");
 };
 
-const checkRows = (matrix, player) => {
+let checkRows = (matrix, player) => {
   for (let i = 0; i < matrix.length; ++i) {
     let rowWin = true;
     for (let j = 0; j < matrix.length; ++j) {
@@ -22,7 +22,7 @@ const checkRows = (matrix, player) => {
 }
 let win = function (matrix, player) {
   //check rows
-  checkRows(matrix, player)
+  return checkRows(matrix, player)
 
   //check columns
   for (let i = 0; i < matrix.length; ++i) {
