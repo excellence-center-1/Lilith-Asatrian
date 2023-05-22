@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "James Brown",
+      "email": "jamesbrown@gmail.com",
+      "location": "New York"
+    },
+    {
+      "id": 2,
+      "name": "Meryl Streep",
+      "email": "marylstreep@gmail.com",
+      "location": "London"
+    },
+    {
+      "id": 3,
+      "name": "Emily Dickinson",
+      "email": "emilydickison@gmail.com",
+      "location": "United States"
+    },
+    {
+      "id": 4,
+      "name": "Pavarotti",
+      "email": "pavarotti@gmail.com",
+      "location": "Italy"
+    },
+    {
+      "id": 5,
+      "name": "Julia Roberts",
+      "email": "juliaroberts@gmail.com",
+      "location": "Toronto"
+    },
+    {
+      "id": 6,
+      "name": "Anne Hathaway",
+      "email": "annehathaway@gmail.com",
+      "location": "United States"
+    },
+    {
+      "id": 7,
+      "name": "Khoren Levonyan",
+      "email": "khorenlevonyan@gmail.com",
+      "location": "Armenia"
+    },
+    {
+      "id": 8,
+      "name": "Julia Rodriguez",
+      "email": "juliarodriguez@gmail.com",
+      "location": "Madrid"
+    },
+    {
+      "id": 9,
+      "name": "Tom Jones",
+      "email": "tomjones@gmail.com",
+      "location": "United Kingdom"
+    },
+    {
+      "id": 10,
+      "name": "Tina Turner",
+      "email": "tinaturner@gmail.com",
+      "location": "United States"
+    }
+  ]
+}
