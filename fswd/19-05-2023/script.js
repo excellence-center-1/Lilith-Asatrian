@@ -1,4 +1,4 @@
-const url = 'http://localhost:8081';
+const url = 'http://127.0.0.1:8081/';
 fetch('users.json')
   .then(response => {
     if (response.status !== 200) {
@@ -14,12 +14,11 @@ fetch('users.json')
 
     if (user) {
       console.log('User:', user);
-    } else {
+    } 
+    else {
       console.log('User not found.');
     }
   })
   .catch(error => {
     console.error(error);
   });
-
-
