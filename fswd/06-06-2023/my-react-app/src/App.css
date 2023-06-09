@@ -1,5 +1,17 @@
+
 body {
   font-family: Arial, sans-serif;
+  font-weight: bolder;
+  color: #1877f2;
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.container {
+  position: absolute;
+  display: block;
+  height: 200vh;
+  width: 500px;
+  left: 550px;
 }
 
 h1 {
@@ -44,7 +56,6 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  align-self: center;
 }
 
 button:hover {
@@ -54,3 +65,4 @@ button:hover {
 .hide {
   display: none;
 }
+

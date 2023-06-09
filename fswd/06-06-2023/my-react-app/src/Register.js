@@ -1,10 +1,14 @@
+
 import { useRef, useState, useEffect } from "react";
-import { useHistory } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+
+//import { useHistory } from "react-router-dom"
 const userRegex = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const Register = () => {
-  const history = useHistory();
+  //const history = useHistory();
   const userRef = useRef();
   const passRef = useRef();
   const [name, setName] = useState('');
@@ -21,7 +25,7 @@ const Register = () => {
     else {
       console.log('Invalid form submission');
     }
-    history.push('/login')
+     //history.push('/login');
   };
 
   useEffect(() => {
@@ -32,8 +36,10 @@ const Register = () => {
     setValidPass(passRegex.test(pass));
   }, [pass]);
 
+  const isFormValid = validName && validPass;
+
   return (
-    <div>
+    <div className="container">
       <h1>Registration</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">
@@ -67,8 +73,10 @@ const Register = () => {
           required
           aria-invalid={!validPass}
         />
-
-        <button type="submit">Register</button>
+        <Link to='/login'>
+          <button type="submit" disabled={!isFormValid}>Register</button>
+        </Link>
+        
       </form>
     </div>
   );
