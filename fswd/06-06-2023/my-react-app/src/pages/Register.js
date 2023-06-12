@@ -181,6 +181,7 @@ const Register = () => {
 
         <Link to='/login'>
           <button type="submit" onClick = {handleRegister} disabled={!isFormValid}>Register</button>
+          <p>Already have an account?</p>
         </Link>
         
       </form>
