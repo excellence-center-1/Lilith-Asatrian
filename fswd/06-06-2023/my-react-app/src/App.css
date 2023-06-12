@@ -1,8 +1,8 @@
-
+/*App.css*/
 body {
   font-family: Arial, sans-serif;
   font-weight: bolder;
-  color: #1877f2;
+  /*color: #1877f2;*/
   font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
   text-align: center;
 }
@@ -21,6 +21,7 @@ h1 {
 
 label {
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 input {
@@ -66,3 +67,31 @@ button:hover {
   display: none;
 }
 
+.gender-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 400
+}
+
+.gender-lable {
+  margin-right: 10px;
+ 
+}
+
+.gender-input {
+  margin-right: 5px;
+}
+
+.dob-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 400;
+  margin-right: 50%
+}
+
+.dob-select {
+  margin-right: 5px;
+  width: 80px;
+}
