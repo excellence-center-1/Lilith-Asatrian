@@ -1,0 +1,18 @@
+CREATE DATABASE contact_list;
+
+\c contact_list
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(50),
+  password VARCHAR(100)
+);
+
+CREATE TABLE contacts (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  profession VARCHAR(255)
+);

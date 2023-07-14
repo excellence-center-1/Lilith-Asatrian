@@ -1,0 +1,44 @@
+.contact-list-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.add-contact-container {
+  margin-bottom: 20px;
+}
+
+.add-contact-input {
+  margin-bottom: 10px;
+  padding: 5px;
+
+}
+
+.search-input {
+  margin-bottom: 10px;
+  padding: 5px;
+
+}
+
+.add-contact-button {
+  background-color: #031f03;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.delete-contact-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
