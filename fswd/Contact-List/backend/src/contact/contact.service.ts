@@ -35,4 +35,25 @@ export class ContactService {
       throw new Error('Failed to get contacts for the user: ' + error.message);
     }
   }
+
+  async addNewContactForUser(userId: number, newContactData: any): Promise<Contact> {
+    try {
+      const user = await this.userModel.findByPk(userId);
+
+      if (!user) {
+        throw new Error('User not found');
+      }
+
+      const newContact = await this.contactModel.create(newContactData);
+
+      await this.userContactModel.create({
+        user_id: userId,
+        contact_id: newContact.id,
+      });
+
+      return newContact;
+    } catch (error) {
+      throw new Error('Failed to add a new contact for the user: ' + error.message);
+    }
+  }
 }

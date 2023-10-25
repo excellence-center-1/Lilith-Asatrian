@@ -1,4 +1,4 @@
-import { Controller, Get, Query, ParseIntPipe } from '@nestjs/common';
+import { Controller, Get, Query, ParseIntPipe, Post, Body } from '@nestjs/common';
 import { ContactService } from './contact.service';
 
 @Controller('contacts')
@@ -12,5 +12,13 @@ export class ContactsController {
 
     return contacts;
   }
-  
+
+  @Post('add')
+  addContact(@Query('userId', ParseIntPipe) userId: number, @Body() newContact: any) {
+    console.log("NewContact: ", newContact);
+    const createdContact = this.contactsService.addNewContactForUser(userId, newContact);
+
+    return createdContact;
+  }
+
 }
