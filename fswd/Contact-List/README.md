@@ -14,13 +14,13 @@ Follow these steps to set up your PostgreSQL database for Contact List
     ```
 ### Client installation
 ```bash
-cd client/
+cd frontend/
 npm install
 npm start
 ```
 ### Server installation
 ```bash
-cd server/
+cd backend/
 ```
 Execute the following command to run the migrations
 ```bash
