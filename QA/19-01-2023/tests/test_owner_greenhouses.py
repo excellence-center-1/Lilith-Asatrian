@@ -21,14 +21,14 @@ class TestGetGreenhouses:
         api_endpoint = f'{base_url}/greenhouses'
         response = requests.get(api_endpoint, headers=headers)
         assert response.status_code == 200
-        #greenhouses = response.json()
-        # assert all(field in greenhouses[0] for field in ['id', 'greenhouse_name', 'greenhouse_size', 'measurement', 'greenhouse_description', 'greenhouse_location', 'created_at', 'updated_at']), "The response is missing some expected fields"
+        greenhouses = response.json()
+        assert all(field in greenhouses[0] for field in ['id', 'greenhouse_name', 'greenhouse_size', 'measurement', 'greenhouse_description', 'greenhouse_location', 'created_at', 'updated_at']), "The response is missing some expected fields"
 
-    # @pytest.mark.get
-    # def test_content_type_in_response(self, base_url, headers):
-    #     api_endpoint = f'{base_url}/greenhouses'
-    #     response = requests.get(api_endpoint, headers=headers)
-    #     assert 'Content-Type' in response.headers, "Unexpected Content-Type header"
+    @pytest.mark.get
+    def test_content_type_in_response(self, base_url, headers):
+        api_endpoint = f'{base_url}/greenhouses'
+        response = requests.get(api_endpoint, headers=headers)
+        assert 'Content-Type' in response.headers, "Unexpected Content-Type header"
 
     @pytest.mark.get
     @allure.title("Get Greenhouse in fixed time")
@@ -53,12 +53,12 @@ class TestGetGreenhouses:
         response = requests.get(api_endpoint, headers=invalid_header)
         assert response.status_code == 401, f"Expected status code 401, but got {response.status_code}"
     
-    # @pytest.mark.get
-    # def test_get_nonexistent_greenhouse(self, base_url, headers):
-    #     greenhouse_id=999
-    #     api_endpoint = f'{base_url}/greenhouses/{greenhouse_id}'
-    #     response = requests.get(api_endpoint, headers=headers)
-    #     assert response.status_code == 404, f"Expected status code 404, but got {response.status_code}"
+    @pytest.mark.get
+    def test_get_nonexistent_greenhouse(self, base_url, headers):
+        greenhouse_id=999
+        api_endpoint = f'{base_url}/greenhouses/{greenhouse_id}'
+        response = requests.get(api_endpoint, headers=headers)
+        assert response.status_code == 404, f"Expected status code 404, but got {response.status_code}"
 
 @allure.title("Post API")
 @pytest.mark.api
@@ -85,7 +85,7 @@ class TestPostGreenhouse:
         db_cursor.execute("SELECT * FROM greenhouses WHERE id = %s", (created_data['id'],))
         result = db_cursor.fetchone()
         assert result is not None, "The created data is not found in the database"
-        
+
     @allure.title("Create greenhouses with already existing names")
     @allure.description("This test case intends to create multiple greenhouses, but already existing names are used")
     @pytest.mark.post
@@ -133,17 +133,17 @@ class TestUpdateGreenhouse:
         response = requests.put(api_endpoint, json=payload, headers=headers)
         assert response.status_code == 200
 
-    # @pytest.mark.put
-    # def test_update_nonexistent_greenhouse(self, base_url, headers):
-    #     greenhouse_id = 800
-    #     api_endpoint = f'{base_url}/greenhouses/{greenhouse_id}'
-    #     payload = {
-    #         'name': 'Hey',
-    #         'description': 'description',
-    #         'location': 'Updated location'
-    #     }
-    #     response = requests.put(api_endpoint, json=payload, headers=headers)
-    #     assert response.status_code == 404, f"The expected status code should be 404, but got {response.status_code}"
+    @pytest.mark.put
+    def test_update_nonexistent_greenhouse(self, base_url, headers):
+        greenhouse_id = 800
+        api_endpoint = f'{base_url}/greenhouses/{greenhouse_id}'
+        payload = {
+            'name': 'Hey',
+            'description': 'description',
+            'location': 'Updated location'
+        }
+        response = requests.put(api_endpoint, json=payload, headers=headers)
+        assert response.status_code == 404, f"The expected status code should be 404, but got {response.status_code}"
     
     @allure.title("Update greenhouse with invalid credentials")
     @pytest.mark.xfail(run=False)
