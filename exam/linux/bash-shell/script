@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ~/exam/linux/file-types/dir/dir1
+
+for i in {1..5};
+do
+	tar cf archive$i.tar $i.txt
+done
+

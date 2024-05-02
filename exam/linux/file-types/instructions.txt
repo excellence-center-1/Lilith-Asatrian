@@ -1,0 +1,6 @@
+regular: touch file.txt
+directory: mkdir new-dir
+symbolic link: ln -s /path/to/source_file /path/to/symlink
+character device file: sudo mknod char_device c 1 3 
+pipe: mkfifo pipe_file
+socket: nc -l -U /tmp/socket-file

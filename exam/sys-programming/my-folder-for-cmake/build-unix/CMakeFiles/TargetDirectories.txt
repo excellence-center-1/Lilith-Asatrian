@@ -1,0 +1,3 @@
+/home/lilit/exam/sys-programming/my-folder-for-cmake/build-unix/CMakeFiles/hello_name.dir
+/home/lilit/exam/sys-programming/my-folder-for-cmake/build-unix/CMakeFiles/edit_cache.dir
+/home/lilit/exam/sys-programming/my-folder-for-cmake/build-unix/CMakeFiles/rebuild_cache.dir
