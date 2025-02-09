@@ -1,0 +1,3 @@
+/home/lilit/Lilith-Asatrian/exam/sys-programming/another_exam/cmake/build/CMakeFiles/myprogram.dir
+/home/lilit/Lilith-Asatrian/exam/sys-programming/another_exam/cmake/build/CMakeFiles/edit_cache.dir
+/home/lilit/Lilith-Asatrian/exam/sys-programming/another_exam/cmake/build/CMakeFiles/rebuild_cache.dir

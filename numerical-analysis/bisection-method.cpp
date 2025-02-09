@@ -7,16 +7,17 @@ float func(float x){
     return x*x-4;
 }
 
-float bisection (float (*func)(float), float a, float b, float epsileon, int max_iteration ){
+float bisection (float a, float b, float epsileon, int max_iteration ){
     if((func(a) * func(b))>=0){
         throw std::invalid_argument("Not right parameters are given");
     }
     else {
-        float c; int iter_count=0;
-        while(iter_count<max_iteration && abs(b-a)>epsileon){
+        float c; 
+        int iter_count=0;
+        while(iter_count<max_iteration && fabs(b-a)>epsileon){
             c=(a+b)/2;
-            if(abs(func(c))<epsileon){
-                return func(c);
+            if(fabs(func(c))==0){
+                return c;
             }
             else{
                 if((func(c)*func(a))<0){
@@ -31,19 +32,18 @@ float bisection (float (*func)(float), float a, float b, float epsileon, int max
             }
         }
         return c;
-
     }
 }
 
 int main(){
-    float a=0;
-    float b=15;
+    float a = -3;
+    float b = 0;
     float epsileon=0.001;
     float max_iteration=100;
 
     try{
         auto start=std::chrono::high_resolution_clock::now();
-        float bisection_root=bisection(func, a,b, epsileon, max_iteration);
+        float bisection_root=bisection(a,b, epsileon, max_iteration);
         auto end=std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed_seconds=end-start;
         std::cout<<"Bisection root: "<<bisection_root<<std::endl;
@@ -51,7 +51,5 @@ int main(){
     } catch(const std::invalid_argument& e){
         std::cerr<<"Invalid argumant: "<<e.what()<<std::endl;
     }
-
-
     return 0;
 }

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/myprogram.dir/src/add.cpp.o CMakeFiles/myprogram.dir/src/main.cpp.o CMakeFiles/myprogram.dir/src/subtract.cpp.o -o myprogram 

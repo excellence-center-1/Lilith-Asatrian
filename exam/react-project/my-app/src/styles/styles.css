@@ -1,0 +1,28 @@
+/* .post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid green;
+    width: 50%;
+    text-align: center;
+    align-self: center;
+    padding: 1.5vw;
+}
+
+.post p {
+    font-size: large;
+} */
+
+#root {
+    width: 50%;
+    margin-left: 25vw;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: solid green;
+    margin-top: 2vh;
+    padding: 1.5vw;
+}

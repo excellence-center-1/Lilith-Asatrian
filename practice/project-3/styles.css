@@ -1,0 +1,237 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.upper{
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 889px;
+    padding: 200px;
+}
+
+.brandname{
+    font-size: 35px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.upper nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.upper nav ul li a{
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.blue-button{
+    /* display: flex; */
+    align-items: center;
+    gap: 5px;
+    background-color: #23A6F0;
+    color: #FFFFFF;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.blue-paragraph{
+    color: #23A6F0;
+    font-size: 16px;
+}
+
+.white-title{
+    color: #FFFFFF;
+    font-size: 58px;
+    width: 542px;
+    height: 240px;
+    padding: 0;
+    margin: 0;
+}
+
+.description{
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.practice-advice{
+    margin-bottom: 250px;
+}
+.bottom{
+    background-color: #252B42;
+    margin: 0;
+    padding: 200px;
+    text-align: center;
+}
+
+.bottom-title{
+    font-size: 40px;
+    font-weight: bold;
+    color:#FFFFFF;
+}
+
+.cards-group{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.card-f{
+    background-color: #FFFFFF;
+    width: 60%;
+    max-width: 400px;
+    height: auto; 
+    padding: 3%; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    background-color: #FFFFFF;
+    width: 60%;
+    max-width: 400px;
+    height: auto; 
+    padding: 3%; 
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+/* 
+.section img {
+    width: 100%;
+    height: 300px;
+} */
+.section cards-group{
+    padding: 0;
+}
+
+.course-title{
+    color: #252B42;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.course-description{
+    color: #737373;
+    font-size: 20px;
+    width: 70%;
+}
+.graphic-description{
+    color: #737373;
+    font-size: 20px;
+    width: 70%;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.cards-info{
+    text-align: left;
+    width: 547px;
+    height: 246px;
+}
+
+.cards-info a{
+    text-decoration: none;
+    color: #23A6F0;
+    margin-top: 30px;
+    display: inline-block;
+    font-size: x-large;
+}
+
+.section{
+    margin-top: 250px;
+}
+
+.p-grey-dolar{
+    color: #BDBDBD;
+    font-weight: bolder;
+}
+
+.p-green-dolar{
+    color: #40BB15;
+    font-weight: bolder;
+}
+
+.dolars{
+    display: flex;
+    gap: 4px
+}
+
+.time{
+    display: flex;
+    gap: 15px;
+}
+
+.learn-more-btn{
+    border: 1px, solid, #23A6F0;
+    padding: 10px 20px;
+    color: #23A6F0;
+    border-radius: 37px;
+    background: none;
+    cursor: pointer;
+}
+
+.round-avatar{
+    border-radius: 50%;
+    width: 30%;
+}
+
+.my-img{
+
+    width: 100%;
+    height: 300px;
+    align-items: center;
+}
+
+.employee-desc{
+    width: 40%;
+    color: #737373;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.section form input{
+    width: 70%;
+    font-family: -webkit-body;
+    padding: 1%;
+    font-size: x-large;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.contact{
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    color: #FAFAFA;
+}
+
+.contact a{
+    display: flex;
+    flex-direction: column;
+    /* gap: 3px; */
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    /* justify-content: flex-start; */
+    text-align: left;
+}

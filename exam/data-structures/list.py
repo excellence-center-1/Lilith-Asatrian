@@ -99,6 +99,7 @@ class DoublyLinkedList:
         while curr_el:
             curr_el.next, curr_el.prev=curr_el.prev, curr_el.next
             curr_el=curr_el.next
+            
 myList=DoublyLinkedList()
 myList.push_front(51)
 print(myList)
