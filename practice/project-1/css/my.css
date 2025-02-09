@@ -301,6 +301,7 @@ body{
 
 .subscription{
     background-color: #DFD7F9;
+    opacity: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,7 +316,7 @@ body{
     font-size: 33px;
     font-family: 'Poppins', sans-serif;
     margin-top: 50px;
-    color: #5E6282;
+    color: #14183E;
     font-weight: 600;
 }
 
@@ -344,4 +345,30 @@ footer div{
     width: 100%;
     text-align: center;
     margin-top: 20px;
+}
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline input {
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+  
+.form-inline button {
+    padding: 10px 20px;
+    background-color: #FF7D68;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+}
+
+footer > div > a{
+    color: #5E6282;
+    font-size: 15px;
+    text-decoration: none;
 }
