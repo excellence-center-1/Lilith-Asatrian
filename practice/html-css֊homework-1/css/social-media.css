@@ -2,7 +2,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .upper{
-    background-image: url('images/background.png');
+    background-image: url('../images/background.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 889px;

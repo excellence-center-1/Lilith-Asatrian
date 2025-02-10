@@ -1,8 +1,5 @@
 const prompt = require('prompt-sync')();
 const calculator = (number1, number2, operation) => {
-    if(isNaN(number1) || isNaN(number2)){
-        return "Not valid num"
-    }
     switch (operation) {
         case "+":
             return number1+number2;
@@ -20,17 +17,20 @@ const calculator = (number1, number2, operation) => {
 }
 
 try{
-    const number1 = parseInt(prompt("Input first number: "));
+    const number1 = parseFloat(prompt("Input first number: "));
     if(isNaN(number1)){
         throw new Error("The input should be number!")
     }
-    const number2 = parseInt(prompt("Input second number: "));
+    const number2 = parseFloat(prompt("Input second number: "));
     if(isNaN(number2)){
         throw new Error("The input should be number!")
     }
     const operation = prompt("Input operation: ");
     if(!['+', '-', '/', '*'].includes(operation)){
         throw new Error("No such operation!")
+    }
+    if(operation=='/' && number2==0){
+        throw new Error("No division to zero!")
     }
     console.log(`Result: ${calculator(number1, number2, operation)}`);
 } catch(error){
