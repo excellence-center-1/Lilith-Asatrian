@@ -16,12 +16,12 @@ const calculator = (number1, number2, operation) => {
     }
 }
 
-try{
-    const number1 = parseFloat(prompt("Input first number: "));
+try {
+    const number1 = parseInt(prompt("Input first number: "));
     if(isNaN(number1)){
         throw new Error("The input should be number!")
     }
-    const number2 = parseFloat(prompt("Input second number: "));
+    const number2 = parseInt(prompt("Input second number: "));
     if(isNaN(number2)){
         throw new Error("The input should be number!")
     }
